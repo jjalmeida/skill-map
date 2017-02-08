@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<div>
+		<h1>PROVA</h1>
+	</div>
+
+	<h:form id="questoes">
+		<p:outputLabel value="Questão #{provaBean.contador + 1} de 50" />
+		<p:panelGrid columns="1">
+			<p:outputLabel value="#{provaBean.pergunta.descricaoPergunta}" />
+			<p:selectOneRadio id="pergunta" value="#{provaBean.respostaUsuario}"
+				layout="grid" columns="1" required="true">
+				<f:selectItem itemLabel="#{provaBean.pergunta.resposta1}"
+					itemValue="#{provaBean.pergunta.resposta1}" />
+				<f:selectItem itemLabel="#{provaBean.pergunta.resposta2}"
+					itemValue="#{provaBean.pergunta.resposta2}" />
+				<f:selectItem itemLabel="#{provaBean.pergunta.resposta3}"
+					itemValue="#{provaBean.pergunta.resposta3}" />
+				<f:selectItem itemLabel="#{provaBean.pergunta.resposta4}"
+					itemValue="#{provaBean.pergunta.resposta4}" />
+			</p:selectOneRadio>
+			<p:commandButton value="Proximo" action="#{provaBean.proximaPergunta()}" update="questoes" /> 
+		</p:panelGrid>
+	</h:form>
+	
+	 
+</body>
+</html>

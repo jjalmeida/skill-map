@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<center>
+		<h2>SKILL MAP</h2>
+		<h:form>
+			<p:panelGrid columns="1" style="margin-top: 150px;">
+				<p:outputLabel value="Localidade" for="site"
+					style="margin-bottom: 10px;" />
+				<p:selectOneMenu value="#{provaBean.idSite}" id="site">
+					<f:selectItem itemLabel="Selecione a localidade" itemValue="" />
+					<f:selectItems value="#{provaBean.listaSite}" var="site" itemLabel="#{site.descricao}" itemValue="#{site.id}" />
+				</p:selectOneMenu>
+					
+				<p:outputLabel value="Login" for="login"
+					style="margin-bottom: 10px;" />
+				<p:inputText value="#{provaBean.prova.login}" id="login"
+					style="margin-bottom: 10px;" required="true" />
+
+				<p:outputLabel value="Nome completo" for="nome" style="margin-bottom: 10px;" />
+				<p:inputText value="#{provaBean.prova.nome}" id="nome"
+					style="margin-bottom: 10px;" required="true" />
+
+				<p:commandButton value="COMEÇAR" action="#{provaBean.comecaProva()}" />
+			</p:panelGrid>
+		</h:form>
+	</center>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+<center>
+	<h2>Resultado do teste</h2>
+
+	<p:panelGrid columns="2">
+		<p:outputLabel value="Total de questões:" />
+		<p:outputLabel value="#{provaBean.listaDePergunta.size()}" />
+
+		<p:outputLabel value="Total de acertos:" />
+		<p:outputLabel value="#{provaBean.qtdAcertos}" />
+	</p:panelGrid>
+
+	<!-- 
+	<h4>Correção</h4>
+	
+	<h:form>
+		<p:dataTable var="resultado" value="#{provaBean.prova.resposta}">
+			<p:column headerText="Pergunta">
+				<p:outputLabel value="#{resultado.pergunta.descricaoPergunta}" />
+			</p:column>
+			<p:column headerText="Resposta Correta">
+				<p:outputLabel value="#{resultado.pergunta.respostaCorreta}" />
+			</p:column>
+			<p:column headerText="Sua resposta">
+				<p:outputLabel value="#{resultado.resposta}" />
+			</p:column>
+		</p:dataTable>
+	</h:form>
+	 -->
+</center>	 
+
+</body>
+</html>

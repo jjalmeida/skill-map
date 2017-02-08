@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" > 
+
+<h:head></h:head> 
+<body> 
+	<h:form>
+		<p:panelGrid columns="2">
+			<p:outputLabel for="area" value="Area de atuação" />
+			<p:inputText id="area" value="#{perguntaBean.pergunta.areaAtuacao}" />
+		
+			<p:outputLabel for="pergunta" value="Pergunta" />
+			<p:inputTextarea id="pergunta" style="width:200px" value="#{perguntaBean.pergunta.descricaoPergunta}" />
+			
+			<p:outputLabel for="r1" value="Resposta 1" />
+			<p:inputTextarea id="r1" style="width:500px" value="#{perguntaBean.pergunta.resposta1}" />
+			
+			<p:outputLabel for="r2" value="Resposta 2" />
+			<p:inputTextarea id="r2" style="width:500px" value="#{perguntaBean.pergunta.resposta2}" />
+			
+			<p:outputLabel for="r3" value="Resposta 3" />
+			<p:inputTextareat id="r3" style="width:500px" value="#{perguntaBean.pergunta.resposta3}" />
+			
+			<p:outputLabel for="r4" value="Resposta 4" />
+			<p:inputTextarea id="r4" style="width:500px" value="#{perguntaBean.pergunta.resposta4}" />
+			
+			<p:outputLabel for="correta" value="Correta" />
+			<p:inputTextarea id="correta" style="width:500px" value="#{perguntaBean.pergunta.respostaCorreta}" />
+			
+			<p:commandButton value="Gravar" action="#{perguntaBean.gravar()}" />
+		</p:panelGrid>
+	</h:form>
+</body> 
+</html>

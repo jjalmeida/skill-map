@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h2>RESULTADOS</h2>
+	
+	<h:form>
+		<p:panelGrid style="width: 200px;margin-bottom: 20px;" columns="2">
+			<p:outputLabel value="Provas aplicadas" />
+			<p:outputLabel value="#{consultaResultadosBean.contProva}" style="text-align:center;" />
+		</p:panelGrid>
+	</h:form>
+	
+	<h:form>
+		<p:panelGrid columns="2">
+			<p:outputLabel value="Area de Atuação" style="color: red;font-weight: bold;" />
+			<p:outputLabel value="Acertos" style="color: red; font-weight: bold;" />
+			
+			<p:outputLabel value="Entreprise Vault" />
+			<p:outputLabel value="#{consultaResultadosBean.contEntrepriseVault}" />
+			
+			<p:outputLabel value="VDI" />
+			<p:outputLabel value="#{consultaResultadosBean.contVDI}" />
+			
+			<p:outputLabel value="Mobilidade" />
+			<p:outputLabel value="#{consultaResultadosBean.contMobilidade}" />
+			
+			<p:outputLabel value="Performance" />
+			<p:outputLabel value="#{consultaResultadosBean.contPerformance}" />
+			
+			<p:outputLabel value="Telecom" />
+			<p:outputLabel value="#{consultaResultadosBean.contTelecom}" />
+			
+			<p:outputLabel value="ASSET" />
+			<p:outputLabel value="#{consultaResultadosBean.contAsset}" />
+			
+			<p:outputLabel value="Operacional" />
+			<p:outputLabel value="#{consultaResultadosBean.contFieldOperacao}" />
+			
+			<p:outputLabel value="Processual" />
+			<p:outputLabel value="#{consultaResultadosBean.contFieldProcesso}" />
+			
+			<p:outputLabel value="Nivel 3" />
+			<p:outputLabel value="#{consultaResultadosBean.contGeraisItauN3}" />
+			
+			<p:outputLabel value="Gravação de mídias e downloads" />
+			<p:outputLabel value="#{consultaResultadosBean.contGmido}" />
+		</p:panelGrid>
+	</h:form>
+</body>
+</html>
